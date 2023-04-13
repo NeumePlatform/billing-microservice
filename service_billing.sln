@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1705.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "service_billing", "service_billing\service_billing.csproj", "{6A83A165-AB3E-4AC2-B2D4-6FDD75BFA3B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionModel", "TransactionModel\TransactionModel.csproj", "{68E84354-B27A-40F9-84E0-E4EAC46FBB05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6A83A165-AB3E-4AC2-B2D4-6FDD75BFA3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A83A165-AB3E-4AC2-B2D4-6FDD75BFA3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A83A165-AB3E-4AC2-B2D4-6FDD75BFA3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E84354-B27A-40F9-84E0-E4EAC46FBB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E84354-B27A-40F9-84E0-E4EAC46FBB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E84354-B27A-40F9-84E0-E4EAC46FBB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E84354-B27A-40F9-84E0-E4EAC46FBB05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

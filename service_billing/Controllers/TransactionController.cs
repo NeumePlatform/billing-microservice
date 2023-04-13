@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using service_billing.services.MessageProducer;
 using service_billing.services.TransactionService;
+using TransactionModel;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,12 +18,14 @@ namespace service_billing.Controllers
     {
 
         private readonly ITransactionService _transactionService;
-        private readonly IMessageProducer _messageProducer;
+        //private readonly IMessageProducer _messageProducer;
+        private readonly IPublishEndpoint _publishEndpoint;
 
-        public TransactionController(ITransactionService transactionService, IMessageProducer messageProducer)
+        public TransactionController(ITransactionService transactionService, IMessageProducer messageProducer, IPublishEndpoint publishEndpoint)
         {
             _transactionService = transactionService;
-            _messageProducer = messageProducer;
+            //_messageProducer = messageProducer;
+            _publishEndpoint = publishEndpoint;
         }
 
         // GET: api/values
@@ -40,15 +44,19 @@ namespace service_billing.Controllers
 
         // POST api/values
         [HttpPost]
-        public async Task<ActionResult<Transaction>> Post([FromBody]Transaction transaction)
+        public async Task<ActionResult> Post([FromBody]TransactionModel.Transaction transaction)
         {
-            Console.WriteLine(transaction);
+            //Console.WriteLine(transaction);
 
-            _messageProducer.SendMessage<Transaction>(transaction);
+            //_messageProducer.SendMessage<Transaction>(transaction);
 
-            var result = await _transactionService.handleTransaction(transaction);
+            //var result = await _transactionService.handleTransaction(transaction);
 
-            return Ok(result);
+            //return Ok(result);
+
+            await _publishEndpoint.Publish<TransactionModel.Transaction>(transaction);
+
+            return Ok();
         }
 
         // PUT api/values/5

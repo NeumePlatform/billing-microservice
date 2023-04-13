@@ -25,7 +25,12 @@ namespace service_billing.services.MessageProducer
 
             using var channel = conn.CreateModel();
 
-            channel.QueueDeclare("transactions");
+            channel.QueueDeclare(queue: "transactions",
+                     durable: false,
+                     exclusive: false,
+                     autoDelete: false,
+                     arguments: null);
+
 
             var jsonString = JsonSerializer.Serialize(message);
             var body = Encoding.UTF8.GetBytes(jsonString);
