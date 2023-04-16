@@ -55,5 +55,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: user/app:latest 
+          tags: stefandeboer/neume-billing-service:latest 
           file: service_billing/Dockerfile
