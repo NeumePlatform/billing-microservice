@@ -36,11 +36,16 @@ builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddDbContext<DataContext>();
 builder.Services.AddMassTransit(config =>
 {
-    config.UsingRabbitMq((ctx, cfg) =>
+    //config.UsingRabbitMq((ctx, cfg) =>
+    //{
+    //    cfg.Host("amqp://guest:guest@localhost:5672");
+
+
+    //});
+
+    config.UsingAzureServiceBus((ctx, cfg) =>
     {
-        cfg.Host("amqp://guest:guest@localhost:5672");
-
-
+        cfg.Host("Endpoint=sb://neumeplatform.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=pf2GckyPcbONdiBWK80Vw1OqCDMsvgk/5+ASbKLV//w=");
     });
 });
 

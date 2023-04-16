@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "service_billing", "service_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionModel", "TransactionModel\TransactionModel.csproj", "{68E84354-B27A-40F9-84E0-E4EAC46FBB05}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FCBD6795-5D57-405D-9E72-9CD0B8241239}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{68E84354-B27A-40F9-84E0-E4EAC46FBB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68E84354-B27A-40F9-84E0-E4EAC46FBB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68E84354-B27A-40F9-84E0-E4EAC46FBB05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBD6795-5D57-405D-9E72-9CD0B8241239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBD6795-5D57-405D-9E72-9CD0B8241239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBD6795-5D57-405D-9E72-9CD0B8241239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBD6795-5D57-405D-9E72-9CD0B8241239}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
