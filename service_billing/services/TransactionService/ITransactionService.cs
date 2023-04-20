@@ -1,9 +1,10 @@
 ﻿using System;
+using TransactionModel;
 namespace service_billing.services.TransactionService
 {
 	public interface ITransactionService
 	{
-		Task<Transaction> handleTransaction(Transaction transaction);
+		Task<TransactionModel.Transaction> handleTransaction(TransactionModel.Transaction transaction);
 	}
 }
 

@@ -50,9 +50,9 @@ namespace service_billing.Controllers
 
             //_messageProducer.SendMessage<Transaction>(transaction);
 
-            //var result = await _transactionService.handleTransaction(transaction);
+            var result = await _transactionService.handleTransaction(transaction);
 
-            //return Ok(result);
+            return Ok(result);
 
             await _publishEndpoint.Publish<TransactionModel.Transaction>(transaction);
 
