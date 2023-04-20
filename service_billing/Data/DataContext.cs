@@ -18,7 +18,7 @@ namespace service_billing.Data
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer("host.docker.internal,1433;Database=billing;User Id=sa;Password=Stefandeboer122599;TrustServerCertificate=true;");
-            //optionsBuilder.UseSqlServer("Server=localhost,1433;Database=billing;User Id=sa;Password=Stefandeboer122599;TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=billing;User Id=sa;Password=Stefandeboer122599;TrustServerCertificate=true;");
         }
 
         public DbSet<TransactionModel.Transaction> transactions { get; set; }
