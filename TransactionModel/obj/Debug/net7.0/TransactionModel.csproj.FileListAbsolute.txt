@@ -1,0 +1,12 @@
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/bin/Debug/net7.0/TransactionModel.deps.json
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/bin/Debug/net7.0/TransactionModel.dll
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/bin/Debug/net7.0/TransactionModel.pdb
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/TransactionModel.csproj.AssemblyReference.cache
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/TransactionModel.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/TransactionModel.AssemblyInfoInputs.cache
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/TransactionModel.AssemblyInfo.cs
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/TransactionModel.csproj.CoreCompileInputs.cache
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/TransactionModel.dll
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/refint/TransactionModel.dll
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/TransactionModel.pdb
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/Debug/net7.0/ref/TransactionModel.dll

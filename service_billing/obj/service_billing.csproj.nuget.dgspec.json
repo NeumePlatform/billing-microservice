@@ -1,0 +1,173 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/service_billing.csproj": {}
+  },
+  "projects": {
+    "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/service_billing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/service_billing.csproj",
+        "projectName": "service_billing",
+        "projectPath": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/service_billing.csproj",
+        "packagesPath": "/Users/stefan/.nuget/packages/",
+        "outputPath": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/stefan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/TransactionModel.csproj": {
+                "projectPath": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/TransactionModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.Azure.ServiceBus.Core": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
+            "MassTransit.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/TransactionModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/TransactionModel.csproj",
+        "projectName": "TransactionModel",
+        "projectPath": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/TransactionModel.csproj",
+        "packagesPath": "/Users/stefan/.nuget/packages/",
+        "outputPath": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/TransactionModel/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/stefan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
