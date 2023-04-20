@@ -52,11 +52,9 @@ namespace service_billing.Controllers
 
             var result = await _transactionService.handleTransaction(transaction);
 
-            return Ok(result);
-
             await _publishEndpoint.Publish<TransactionModel.Transaction>(transaction);
 
-            return Ok();
+            return Ok(result);
         }
 
         // PUT api/values/5
