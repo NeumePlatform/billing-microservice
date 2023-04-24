@@ -22,10 +22,12 @@ namespace service_billing.services.TransactionService
 
         public async Task<TransactionModel.Transaction> handleTransaction(TransactionModel.Transaction transaction)
         {
-            Console.WriteLine(_context.transactions.Add(transaction));
+            Console.WriteLine("Add Transaction: " + _context.transactions.Add(transaction));
+            Console.WriteLine("Transaction: " + transaction);
             
             //var response = await _context.SaveChangesAsync();
-            Console.WriteLine(_context.SaveChanges());
+            Console.WriteLine("Save Changes: " + _context.SaveChanges());
+            Console.WriteLine("Changes Saved!");
 
             //Console.WriteLine(response);
             return transaction;
