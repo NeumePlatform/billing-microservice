@@ -54,6 +54,8 @@ namespace service_billing.Controllers
 
             await _publishEndpoint.Publish<TransactionModel.Transaction>(transaction);
 
+            Console.WriteLine(result);
+
             return Ok(result);
         }
 
