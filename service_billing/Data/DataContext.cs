@@ -17,7 +17,7 @@ namespace service_billing.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            Console.WriteLine(optionsBuilder.UseSqlServer("Server=172.19.0.3,1433;Database=billing;User Id=sa;Password=Stefandeboer122599;TrustServerCertificate=true;"));
+            Console.WriteLine(optionsBuilder.UseSqlServer("Server=172.19.0.3,1433;Database=billing;User Id=sa;Password=Stefandeboer122599;"));
             //Console.WriteLine(optionsBuilder.UseSqlServer("Server=localhost,1433;Database=billing;User Id=sa;Password=Stefandeboer122599;TrustServerCertificate=true;"));
         }
 
