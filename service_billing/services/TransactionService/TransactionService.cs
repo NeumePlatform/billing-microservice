@@ -23,12 +23,14 @@ namespace service_billing.services.TransactionService
         public async Task<TransactionModel.Transaction> handleTransaction(TransactionModel.Transaction transaction)
         {
             _context.transactions.Add(transaction);
-            
+
+            Console.WriteLine("Database Connection: " + _context.Database.CanConnect());
 
             //Console.WriteLine(_context.ChangeTracker.HasChanges());
             //var response = await _context.SaveChangesAsync();
-            var result =  await _context.SaveChangesAsync();
-            Console.WriteLine("Result :" + result);
+           
+
+            await _context.SaveChangesAsync();
 
             //Console.WriteLine(response);
             return transaction;
