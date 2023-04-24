@@ -24,9 +24,10 @@ namespace service_billing.services.TransactionService
         {
             Console.WriteLine(_context.transactions.Add(transaction));
             
-            var response = await _context.SaveChangesAsync();
+            //var response = await _context.SaveChangesAsync();
+            Console.WriteLine(_context.SaveChanges());
 
-            Console.WriteLine(response);
+            //Console.WriteLine(response);
             return transaction;
         }
     }
