@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using service_billing.services.MessageProducer;
 using service_billing.services.TransactionService;
@@ -48,6 +49,7 @@ namespace service_billing.Controllers
         // POST api/values
         [HttpPost]
         [Authorize("write:transaction")]
+        [EnableCors("MyPolicy")]
         public async Task<ActionResult> Post([FromBody]TransactionModel.Transaction transaction)
         {
             // TEMP LEFT OUT 
