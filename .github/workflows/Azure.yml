@@ -1,0 +1,34 @@
+name: Docker
+
+on:
+  push:
+    tags: ["v*.*.*"]
+    branches: [ "main" ]
+
+env:
+  IMAGE_NAME: neume-billing-service
+
+jobs:
+  build:
+    name: Build container image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get tag
+        id: tag
+        uses: dawidd6/action-get-tag@v1
+      - name: Log into registry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ secrets.REGISTRY_SERVER }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - name: Build & Push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          build-args: |
+            version=${{ steps.tag.outputs.tag }}
+          tags: ${{ secrets.REGISTRY_SERVER }}/${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.tag }}
