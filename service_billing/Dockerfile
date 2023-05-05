@@ -7,8 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR "/src"
-COPY ["/service_billing/service_billing.csproj", "service_billing/"]
-COPY ["/TransactionModel/TransactionModel.csproj", "TransactionModel/"]
+COPY ["/service_billing/service_billing.csproj", "/service_billing/"]
+COPY ["/TransactionModel/TransactionModel.csproj", "/TransactionModel/"]
 RUN dotnet restore "service_billing/service_billing.csproj"
 COPY . .
 WORKDIR "/src/service_billing"
