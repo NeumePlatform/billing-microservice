@@ -87,3 +87,4 @@
 /Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/bin/Debug/net7.0/Azure.Messaging.ServiceBus.dll
 /Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/bin/Debug/net7.0/MassTransit.Azure.ServiceBus.Core.dll
 /Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/bin/Debug/net7.0/Microsoft.Azure.Amqp.dll
+/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

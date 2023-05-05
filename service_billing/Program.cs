@@ -1,10 +1,15 @@
 ﻿global using service_billing.Models;
 global using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using service_billing.services.TransactionService;
 using service_billing.Data;
 using service_billing.services.MessageProducer;
 using MassTransit;
 using MassTransit.AspNetCoreIntegration;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using service_billing;
 using TransactionModel;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,6 +55,26 @@ builder.Services.AddMassTransit(config =>
 });
 
 builder.Services.AddScoped<IMessageProducer, MessageProducer>();
+
+
+var domain = $"https://{builder.Configuration["Auth0:Domain"]}/";
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.Authority = domain;
+        options.Audience = builder.Configuration["Auth0:Audience"];
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            NameClaimType = ClaimTypes.NameIdentifier
+        };
+    });
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("write:transaction", policy => policy.Requirements.Add(new HasScopeRequirement("write:transaction", domain)));
+});
+
+builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
 
 var app = builder.Build();
 

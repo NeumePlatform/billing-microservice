@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using service_billing.services.MessageProducer;
 using service_billing.services.TransactionService;
@@ -17,13 +18,15 @@ namespace service_billing.Controllers
     public class TransactionController : Controller
     {
 
-        private readonly ITransactionService _transactionService;
-        //private readonly IMessageProducer _messageProducer;
+        //TODO: Fix connection with SQL Server
+        // private readonly ITransactionService _transactionService;
         private readonly IPublishEndpoint _publishEndpoint;
 
         public TransactionController(ITransactionService transactionService, IMessageProducer messageProducer, IPublishEndpoint publishEndpoint)
         {
-            _transactionService = transactionService;
+            //TODO: Fix connection with SQL Server
+            // _transactionService = transactionService;
+            
             //_messageProducer = messageProducer;
             _publishEndpoint = publishEndpoint;
         }
@@ -44,19 +47,17 @@ namespace service_billing.Controllers
 
         // POST api/values
         [HttpPost]
+        [Authorize("write:transaction")]
         public async Task<ActionResult> Post([FromBody]TransactionModel.Transaction transaction)
         {
-            //Console.WriteLine(transaction);
-
-            //_messageProducer.SendMessage<Transaction>(transaction);
-
-            var result = await _transactionService.handleTransaction(transaction);
+            // TEMP LEFT OUT 
+            // var result = await _transactionService.handleTransaction(transaction);
 
             await _publishEndpoint.Publish<TransactionModel.Transaction>(transaction);
 
-            Console.WriteLine(result);
+            Console.WriteLine(transaction);
 
-            return Ok(result);
+            return Ok(transaction);
         }
 
         // PUT api/values/5

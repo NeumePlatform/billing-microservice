@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tvw4Rlt7zBBos0Uhj/9RrFdRscc92jhf5LGhRpQW3JX6eduYnjzzcoiAcbWeqHQb+cyalVEQ75U07gelmDUXhQ==",
+  "dgSpecHash": "vXPNPA9OMJdvMioogCQxuRAPbaXVGtECEHMwu8s/b3PKRThNRHmSf0CEUOdoIXWfQ55jm9TwVzJDEUXI+MRK4Q==",
   "success": true,
   "projectFilePath": "/Users/stefan/Documents/School/Semester6/IP/Neume_BE/microservices/service_billing/service_billing/service_billing.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "/Users/stefan/.nuget/packages/masstransit.azure.servicebus.core/8.0.14/masstransit.azure.servicebus.core.8.0.14.nupkg.sha512",
     "/Users/stefan/.nuget/packages/masstransit.extensions.dependencyinjection/7.3.1/masstransit.extensions.dependencyinjection.7.3.1.nupkg.sha512",
     "/Users/stefan/.nuget/packages/masstransit.rabbitmq/8.0.14/masstransit.rabbitmq.8.0.14.nupkg.sha512",
+    "/Users/stefan/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.5/microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
     "/Users/stefan/.nuget/packages/microsoft.aspnetcore.openapi/7.0.4/microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
     "/Users/stefan/.nuget/packages/microsoft.azure.amqp/2.6.1/microsoft.azure.amqp.2.6.1.nupkg.sha512",
     "/Users/stefan/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
