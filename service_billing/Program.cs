@@ -76,14 +76,14 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
 
-var myPolicy = "allowMyOrigins";
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: myPolicy,
+    options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000")
+            policy.WithOrigins("http://localhost:3000/")
                 .AllowAnyMethod().AllowAnyHeader();
         });
 });
@@ -101,7 +101,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseCors(myPolicy);
+app.UseCors(MyAllowSpecificOrigins);
 
 app.MapControllers();
 

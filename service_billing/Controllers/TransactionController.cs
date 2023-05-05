@@ -49,7 +49,7 @@ namespace service_billing.Controllers
         // POST api/values
         [HttpPost]
         [Authorize("write:transaction")]
-        [EnableCors("MyPolicy")]
+        [EnableCors("MyAllowSpecificOrigins")]
         public async Task<ActionResult> Post([FromBody]TransactionModel.Transaction transaction)
         {
             // TEMP LEFT OUT 
