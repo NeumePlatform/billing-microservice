@@ -21,5 +21,5 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
         
     - run: |
-        docker build -t neume.azurecr.io/neume-billing-service:${{ github.sha }} -f service_billing/service_billing .
+        docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
         docker push neume.azurecr.io/neume-billing-service:${{ github.sha }}
