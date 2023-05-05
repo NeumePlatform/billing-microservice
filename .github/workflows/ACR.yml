@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   
 jobs: 
-  buid:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
