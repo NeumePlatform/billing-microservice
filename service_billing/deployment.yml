@@ -2,7 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: neume-billing-service-deployment
+  labels:
+    app: neume-billing-service
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: neume-billing-service-pod
@@ -13,10 +16,6 @@ spec:
     spec:
       containers:
         - name: neume-billing-service-container
-          image: neume.azurecr.io/neume-billing-service:v1
-          resources:
-              limits: 
-                memory: "128Mi"
-                cpu: "500m"
+          image: neume.azurecr.io/neume:v2
           ports:
             - containerPort: 80
