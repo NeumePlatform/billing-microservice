@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: neume-billing-service-deployment
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: neume-billing-service-pod
