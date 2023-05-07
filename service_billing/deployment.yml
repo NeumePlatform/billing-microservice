@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neume-billing-service-deployment
+spec:
+  selector:
+    matchLabels:
+      app: neume-billing-service-pod
+  template:
+    metadata:
+      labels:
+        app: neume-billing-service-pod
+    spec:
+      containers:
+        - name: neume-billing-service-container
+          image: neume.azurecr.io/neume-billing-service:v1
+          resources:
+              limits: 
+                memory: "128Mi"
+                cpu: "500m"
+          ports:
+            - containerPort: 80
