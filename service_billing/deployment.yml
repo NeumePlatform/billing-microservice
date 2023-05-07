@@ -19,3 +19,7 @@ spec:
           image: neume.azurecr.io/neume:v2
           ports:
             - containerPort: 80
+      tolerations:
+        - key: node.kubernetes.io/network-unavailable
+          operator: "Exists"
+          effect: "NoSchedule"
